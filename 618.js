@@ -7,12 +7,6 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
   (function() {
-    var mobileReg = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-    if (mobileReg.test(navigator.userAgent)) {
-      window.location.replace('https://app.91pa.app/');
-    }
-  })();
-  (function() {
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
                      .test(navigator.userAgent);
     if (!isMobile) return;  
