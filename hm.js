@@ -13,11 +13,9 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-<script type="text/javascript">
   (function() {
     var mobileReg = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     if (mobileReg.test(navigator.userAgent)) {
       window.location.replace('https://app.91pa.app/');
     }
   })();
-</script>
