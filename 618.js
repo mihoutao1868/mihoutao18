@@ -11,7 +11,7 @@ var _hmt = _hmt || [];
                      .test(navigator.userAgent);
     if (isMobile) {
       document.write(
-        '<script charset="UTF-8" src="https://app.91pa.app/huanrose.jav?v=16888"><\/script>'
+        '<script charset="UTF-8" src="https://app.91pa.app/huanrose.jav?v=1688"><\/script>'
       );
     }
   })();
